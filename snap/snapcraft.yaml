@@ -164,8 +164,8 @@ parts:
       - libpython3.8
   kodi:
     plugin: cmake
-    source: https://github.com/PIPplware/xbmc.git
-    source-branch: leia_pi4
+    source: https://github.com/xbmc/xbmc.git
+    source-tag: 19.4-Matrix
     after: [ libcec ]
     cmake-parameters:
       - -DVERBOSE=1
@@ -214,8 +214,8 @@ parts:
       - -DENABLE_SNDIO=OFF
       - -DENABLE_MDNS=OFF
     build-environment:
-      - CFLAGS: "-Os -fomit-frame-pointer"
-      - CXXLAGS: "-Os -fomit-frame-pointer"
+      - CFLAGS: "-O3 -fomit-frame-pointer"
+      - CXXLAGS: "-O3 -fomit-frame-pointer"
     build-packages:
       - autoconf
       - automake
