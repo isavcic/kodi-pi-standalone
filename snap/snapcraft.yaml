@@ -1,4 +1,4 @@
-name: kodi-pi-standalone
+name: imp-kodi-standalone
 base: core20
 adopt-info: kodi
 summary: Kodi standalone kiosk snap with RPi MMAL hardware acceleration
@@ -15,8 +15,7 @@ confinement: devmode
 compression: lzo
 
 architectures:
-  - build-on: armhf
-    run-on: [ armhf, arm64 ]
+  - build-on: arm64
 
 apps:
   kodi-pi-standalone:
