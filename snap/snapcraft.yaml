@@ -15,7 +15,8 @@ confinement: devmode
 compression: lzo
 
 architectures:
-  - build-on: arm64
+  - build-on: armhf
+    run-on: [ armhf, arm64 ]
 
 apps:
   kodi-pi-standalone:
