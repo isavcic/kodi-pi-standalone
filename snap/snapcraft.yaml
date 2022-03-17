@@ -213,6 +213,7 @@ parts:
       - -DENABLE_LCMS2=OFF
       - -DENABLE_SNDIO=OFF
       - -DENABLE_MDNS=OFF
+      - -DAPP_RENDER_SYSTEM=gles
     build-environment:
       - CFLAGS: "-O3 -fomit-frame-pointer"
       - CXXLAGS: "-O3 -fomit-frame-pointer"
@@ -335,6 +336,7 @@ parts:
       - swig
       - texinfo
       - zlib1g-dev
+      - libspdlog-dev
     override-build: |
       snapcraftctl build
       # build addons
@@ -450,6 +452,7 @@ parts:
       - unzip
       - x11-xserver-utils
       - zip
+      - libspdlog-dev
   cleanup:
     plugin: nil
     after: [ kodi ]
